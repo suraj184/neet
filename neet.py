@@ -111,7 +111,7 @@ for i in range(240410000001,240412406100):
         'Scorecardmodel[Day]': l,
         'Scorecardmodel[Month]': k,
         'Scorecardmodel[Year]': j,
-        '_csrf-frontend': data['inputs'][0]['value']}
+        '_csrf-frontend': data['_csrf-frontend']}
         print(l)
         if form_details["method"] == "post":
             res = session.post(url, data=data1)
