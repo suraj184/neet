@@ -173,13 +173,13 @@ def run():
 
 threads = []
 
-for i in range(50)
+for i in range(50):
          t = threading.Thread(target=run)        
          t.daemon = True
          threads.append(t)
 
-for i in range(50)
+for i in range(50):
         threads[i].start()
 
-for i in range(50)
+for i in range(50):
         threads[i].join()
