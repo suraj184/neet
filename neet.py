@@ -95,14 +95,16 @@ if __name__ == "__main__":
     print(data)
         
 import re
-
+import threading
+list3=[]
 
 url = urljoin(url, form_details["action"])
 day=['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
 month=['01','02','03','04','05','06','07','08','09','10','11','12']
 year=['2003','2004','2005','2006','2007']
 a=[240411188233,240411186689]
-for i in range(240410000001,240412406100):
+def run():
+ for i in range(240410001001,240412406100):
   print(i)
   for j in year:
     for k in month:
@@ -166,5 +168,18 @@ for i in range(240410000001,240412406100):
       continue;
     else:
       break;
-final=[headers1]+list3
-print(final)
+ final=[headers1]+list3
+ print(final)
+
+threads = []
+
+for i in range(50)
+         t = threading.Thread(target=run)        
+         t.daemon = True
+         threads.append(t)
+
+for i in range(50)
+        threads[i].start()
+
+for i in range(50)
+        threads[i].join()
