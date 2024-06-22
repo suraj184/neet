@@ -113,8 +113,10 @@ def run():
         'Scorecardmodel[Day]': l,
         'Scorecardmodel[Month]': k,
         'Scorecardmodel[Year]': j,
-        '_csrf-frontend': data['_csrf-frontend']}
-        print(l)
+        '_csrf-frontend': data['inputs'][0]['value']}
+        print(len(list3))
+        print(list3[-1])
+        print(str(i)+":-"+l+"/"+k+"/"+j)
         if form_details["method"] == "post":
             res = session.post(url, data=data1)
         elif form_details["method"] == "get":
